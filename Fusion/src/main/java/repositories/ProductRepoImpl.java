@@ -139,11 +139,11 @@ public class ProductRepoImpl implements ProductRepo {
 
     public static void main(String[] args) {
         ProductRepo pr = new ProductRepoImpl();
-        pr.createProduct(new Product(1, "blah", "desc", 12.00F, 7, null));
-        System.out.println(pr.getProduct(1));
+//        pr.createProduct(new Product(1, "blah", "desc", 12.00F, 7, null));
+        System.out.println(pr.getProduct(3));
         System.out.println(pr.getAllProducts());
-        System.out.println(pr.updateProduct(new Product(3, "123", "desc", 12.00F, 90, null)));
-        pr.deleteProduct(1);
-        System.out.println("deleted");
+//        System.out.println(pr.updateProduct(new Product(3, "123", "desc", 12.00F, 90, null)));
+//        pr.deleteProduct(1);
+//        System.out.println("deleted");
     }
 }

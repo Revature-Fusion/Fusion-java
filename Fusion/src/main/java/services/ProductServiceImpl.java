@@ -9,6 +9,10 @@ public class ProductServiceImpl implements ProductService {
 
     private ProductRepo pr;
 
+    public ProductServiceImpl(ProductRepo pr) {
+        this.pr = pr;
+    }
+
     @Override
     public Product getProduct(int id) {
         return pr.getProduct(id);
