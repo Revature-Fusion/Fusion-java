@@ -12,6 +12,8 @@ public interface OrdersRepo {
 
     public List<Orders> getAllOrders();
 
+    public Orders addOrder(Orders o);
+
     public Orders updateOrders(Orders change);
 
     public Orders deleteOrders(int oID);
