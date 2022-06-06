@@ -19,7 +19,7 @@ public class OrdersServiceImpl implements OrdersService{
     }
 
     @Override
-    public Orders getOrderByUserID(int uID) {
+    public List<Orders> getOrderByUserID(int uID) {
         return or.getOrderByUserID(uID);
     }
 

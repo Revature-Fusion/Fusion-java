@@ -36,18 +36,22 @@ public class OrdersRepoImpl implements OrdersRepo{
         return null;
     }
     @Override
-    public Orders getOrderByUserID(int uID) {
+    public List<Orders> getOrderByUserID(int uID) {
         String sql = "SELECT * FROM order WHERE u_id = ?";
 
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setInt(1, uID);
 
             ResultSet rs = ps.executeQuery();
 
-            if (rs.next()) {
-                return buildOrder(rs);
+            List<Orders> orders = new ArrayList<>();
+
+            while(rs.next()) {
+                orders.add(buildOrder(rs));
             }
+
+            return orders;
+
         } catch (SQLException e) {
             e.printStackTrace();
         }

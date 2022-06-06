@@ -8,7 +8,7 @@ public interface OrdersRepo {
 
     public Orders getOrder(int oID);
 
-    public Orders getOrderByUserID(int uID);
+    public List<Orders> getOrderByUserID(int uID);
 
     public List<Orders> getAllOrders();
 
