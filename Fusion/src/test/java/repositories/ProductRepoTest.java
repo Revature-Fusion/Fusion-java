@@ -12,6 +12,8 @@ public class ProductRepoTest {
 
     static Product product;
 
+    static Product createdProduct;
+
     public ProductRepoTest() {}
 
     @Before
@@ -26,6 +28,18 @@ public class ProductRepoTest {
             pr.deleteProduct(product.getP_id());
             product = null;
         }
+        if (createdProduct != null) {
+            pr.deleteProduct(createdProduct.getP_id());
+            createdProduct = null;
+        }
+    }
+
+    @Test
+    public void createProduct() {
+        Product expected = new Product(1, "name", "desc", 12f, 15, null);
+        createdProduct = pr.createProduct(expected);
+        expected.setP_id(createdProduct.getP_id());
+        Assertions.assertEquals(expected, createdProduct);
     }
 
     @Test
@@ -33,5 +47,19 @@ public class ProductRepoTest {
         Product actual = pr.getProduct(product.getP_id());
         Product expected = new Product(product.getP_id(), "name", "desc", 12f, 15, null);
         Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void updateProduct() {
+        String newName = "new";
+        product.setName(newName);
+        Product actual = pr.updateProduct(product);
+        Assertions.assertEquals(actual.getName(), newName);
+    }
+
+    @Test
+    public void deleteProduct() {
+        Product actual = pr.deleteProduct(product.getP_id());
+        Assertions.assertEquals(product, actual);
     }
 }
