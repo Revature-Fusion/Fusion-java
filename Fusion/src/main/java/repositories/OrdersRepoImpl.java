@@ -41,6 +41,7 @@ public class OrdersRepoImpl implements OrdersRepo{
 
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, uID);
 
             ResultSet rs = ps.executeQuery();
 

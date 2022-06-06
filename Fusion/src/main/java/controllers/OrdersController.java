@@ -3,7 +3,6 @@ package controllers;
 import com.google.gson.Gson;
 import io.javalin.http.Handler;
 import models.Orders;
-import services.OrderDetailsService;
 import services.OrdersService;
 
 import java.util.List;
@@ -30,7 +29,6 @@ public class OrdersController {
     };
 
     public Handler getOrderById = (context) -> {
-
         int oID = Integer.parseInt(context.pathParam("oID"));
         Orders order = os.getOrder(oID);
         context.result(gson.toJson(order));

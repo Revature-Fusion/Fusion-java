@@ -20,7 +20,7 @@ public class OrderDetailsServiceImpl implements OrderDetailsService{
     }
 
     @Override
-    public OrderDetails getOrderDetailsByOrderID(int oID) {
+    public List<OrderDetails> getOrderDetailsByOrderID(int oID) {
         return odr.getOrderDetailsByOrderID(oID);
     }
 

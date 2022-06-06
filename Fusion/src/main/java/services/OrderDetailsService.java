@@ -8,7 +8,7 @@ public interface OrderDetailsService {
 
     public OrderDetails getOrderDetails(int oDID);
 
-    public OrderDetails getOrderDetailsByOrderID(int oID);
+    public List<OrderDetails> getOrderDetailsByOrderID(int oID);
 
     public List<OrderDetails> getAllOrderDetails();
 

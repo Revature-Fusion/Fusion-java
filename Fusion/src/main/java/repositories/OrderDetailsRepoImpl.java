@@ -38,7 +38,7 @@ public class OrderDetailsRepoImpl implements OrderDetailsRepo{
     }
 
     @Override
-    public OrderDetails getOrderDetailsByOrderID(int oID) {
+    public List<OrderDetails> getOrderDetailsByOrderID(int oID) {
         String sql = "SELECT * FROM order_details WHERE o_id = ?";
 
         try {
@@ -47,9 +47,14 @@ public class OrderDetailsRepoImpl implements OrderDetailsRepo{
 
             ResultSet rs = ps.executeQuery();
 
-            if (rs.next()) {
-                return buildOrderDetails(rs);
+            List<OrderDetails> orderDetails = new ArrayList<>();
+
+            while(rs.next()) {
+                orderDetails.add(buildOrderDetails(rs));
             }
+
+            return orderDetails;
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
