@@ -1,4 +1,4 @@
-package CRUDTests;
+package CRUDUnitTests;
 
 import models.Orders;
 import org.junit.jupiter.api.Assertions;
@@ -78,7 +78,9 @@ public class OrdersTests {
     }
 
     @Test
-    public void testDeleteLoginByUserID() {
+    public void testDeleteLoginByUserID(){
+//        Need to recreate the orders after deleting them based on userID so it doesn't affect the database
+
 //        Orders o = new Orders(3, 1,1654613955000l,1);
 //
 //        Orders addedOrders = os.addOrder(o);

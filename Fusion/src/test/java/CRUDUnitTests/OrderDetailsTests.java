@@ -1,4 +1,4 @@
-package CRUDTests;
+package CRUDUnitTests;
 
 public class OrderDetailsTests {
 
