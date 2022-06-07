@@ -18,7 +18,7 @@ public class OrdersRepoImpl implements OrdersRepo{
 
     @Override
     public Orders getOrder(int oID) {
-        String sql = "SELECT * FROM order WHERE o_id = ?";
+        String sql = "SELECT * FROM orders WHERE o_id = ?";
 
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -37,7 +37,7 @@ public class OrdersRepoImpl implements OrdersRepo{
     }
     @Override
     public List<Orders> getOrderByUserID(int uID) {
-        String sql = "SELECT * FROM order WHERE u_id = ?";
+        String sql = "SELECT * FROM orders WHERE u_id = ?";
 
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -92,7 +92,7 @@ public class OrdersRepoImpl implements OrdersRepo{
             PreparedStatement ps = conn.prepareStatement(sql);
 
             ps.setInt(1, o.getuID());
-            ps.setInt(2, o.getDateOfPurchasing());
+            ps.setLong(2, o.getDateOfPurchasing());
             ps.setInt(3, o.getaID());
 
             ResultSet rs = ps.executeQuery();
@@ -115,7 +115,7 @@ public class OrdersRepoImpl implements OrdersRepo{
             PreparedStatement ps = conn.prepareStatement(sql);
 
             ps.setInt(1, change.getuID());
-            ps.setInt(2, change.getDateOfPurchasing());
+            ps.setLong(2, change.getDateOfPurchasing());
             ps.setInt(3, change.getaID());
             ps.setInt(4, change.getoID());
             ResultSet rs = ps.executeQuery();
@@ -172,10 +172,10 @@ public class OrdersRepoImpl implements OrdersRepo{
     }
 
     private Orders buildOrder(ResultSet rs) throws SQLException {
-        Orders o = new Orders();
+        Orders o = new Orders(1, 1, 1654613952000l, 1);
         o.setoID(rs.getInt("o_id"));
         o.setuID(rs.getInt("u_id"));
-        o.setDateOfPurchasing(rs.getInt("date_of_purchase"));
+        o.setDateOfPurchasing(rs.getLong("date_of_purchase"));
         o.setaID(rs.getInt("a_id"));
 
         return o;

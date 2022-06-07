@@ -6,12 +6,12 @@ public class Orders {
 
     private int oID;    // Order ID
     private int uID;    // User ID
-    private int dateOfPurchasing;   // Date Of Purchasing as UNIX Timestamp
+    private long dateOfPurchasing;   // Date Of Purchasing as UNIX Timestamp
     private int aID;    // Address ID
 
     public Orders(){ }
 
-    public Orders(int oID, int uID, int dateOfPurchasing, int aID) {
+    public Orders(int oID, int uID, long dateOfPurchasing, int aID) {
         this.oID = oID;
         this.uID = uID;
         this.dateOfPurchasing = dateOfPurchasing;
@@ -34,11 +34,11 @@ public class Orders {
         this.uID = uID;
     }
 
-    public int getDateOfPurchasing() {
+    public long getDateOfPurchasing() {
         return dateOfPurchasing;
     }
 
-    public void setDateOfPurchasing(int dateOfPurchasing) {
+    public void setDateOfPurchasing(long dateOfPurchasing) {
         this.dateOfPurchasing = dateOfPurchasing;
     }
 

@@ -16,7 +16,6 @@ public class OrderDetailsRepoImpl implements OrderDetailsRepo{
 
     public OrderDetailsRepoImpl() {}
 
-
     @Override
     public OrderDetails getOrderDetails(int oDID) {
         String sql = "SELECT * FROM order_details WHERE od_id = ?";
