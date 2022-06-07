@@ -22,8 +22,14 @@ public class AddressController {
         Address a = gson.fromJson(context.body(), Address.class);
 
         a = as.createAddress(a);
-        context.result(gson.toJson(a));
-        context.status(201);
+
+        if(a != null) {
+            context.result(gson.toJson(a));
+            context.status(201);
+        } else {
+            context.status(404);
+        }
+
     };
 
     public Handler getAddress = (context) -> {
