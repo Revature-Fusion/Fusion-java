@@ -44,7 +44,7 @@ public class ProductController {
         } else {
             context.status(404);
         }
-        
+
     };
 
     public Handler updateProduct = (context) -> {
