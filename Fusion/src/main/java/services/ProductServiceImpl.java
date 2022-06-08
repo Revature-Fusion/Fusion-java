@@ -1,5 +1,6 @@
 package services;
 
+import exceptions.ResourceNotFoundException;
 import models.Product;
 import repositories.ProductRepo;
 
@@ -14,7 +15,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Product getProduct(int id) {
+    public Product getProduct(int id) throws ResourceNotFoundException {
         return pr.getProduct(id);
     }
 
@@ -29,12 +30,12 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Product updateProduct(Product change) {
+    public Product updateProduct(Product change) throws ResourceNotFoundException {
         return pr.updateProduct(change);
     }
 
     @Override
-    public Product deleteProduct(int id) {
+    public Product deleteProduct(int id) throws ResourceNotFoundException {
         return pr.deleteProduct(id);
     }
 }
