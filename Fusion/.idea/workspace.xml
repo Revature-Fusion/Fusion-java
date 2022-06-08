@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0f5b9e4-1907-4501-8f95-43dab50e05d9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ProductController.java" afterDir="false" />
+    <list default="true" id="f0f5b9e4-1907-4501-8f95-43dab50e05d9" name="Changes" comment="merging address">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/AddressController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/AddressController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/ProductController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,16 +42,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "C:/Users/patri/Documents/Coding/RevTraining/Python/FusionApp/Fusion-java/Fusion",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "build.tools"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/patri/Documents/Coding/RevTraining/Python/FusionApp/Fusion-java/Fusion&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;build.tools&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.App">
+}</component>
+  <component name="RunManager" selected="JUnit.AddressRepoTest">
     <configuration name="AddressRepoImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="repositories.AddressRepoImpl" />
       <module name="Fusion" />
@@ -76,19 +78,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JDBCConnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="util.JDBCConnection" />
-      <module name="Fusion" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProductRepoImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="repositories.ProductRepoImpl" />
       <module name="Fusion" />
@@ -102,21 +91,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
+    <configuration name="AddressRepoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Fusion" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repositories" />
+      <option name="MAIN_CLASS_NAME" value="repositories.AddressRepoTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+    <configuration name="AddressRepoTest.getAddressByUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Fusion" />
-      <option name="filePath" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repositories" />
+      <option name="MAIN_CLASS_NAME" value="repositories.AddressRepoTest" />
+      <option name="METHOD_NAME" value="getAddressByUser" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AddressRepoTest" />
+        <item itemvalue="JUnit.AddressRepoTest.getAddressByUser" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.AddressRepoImpl" />
       </list>
@@ -131,6 +140,14 @@
       <option name="presentableId" value="Default" />
       <updated>1654288359692</updated>
     </task>
+    <task id="LOCAL-00001" summary="merging address">
+      <created>1654639581843</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654639581843</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,5 +160,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="merging address" />
+    <option name="LAST_COMMIT_MESSAGE" value="merging address" />
   </component>
 </project>
