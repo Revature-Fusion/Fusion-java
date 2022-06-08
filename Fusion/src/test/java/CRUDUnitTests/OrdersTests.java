@@ -72,7 +72,7 @@ public class OrdersTests {
     }
 
     @Test
-    public void testDeleteLogin() {
+    public void testDeleteOrders() {
         Orders o = new Orders(3, 1,1654613955000l,1);
 
         Orders addedOrders = os.addOrder(o);
@@ -85,7 +85,7 @@ public class OrdersTests {
     }
 
     @Test
-    public void testDeleteLoginByUserID(){
+    public void testDeleteOrdersByUserID(){
           Orders o = new Orders(3, 1,1654633955000l,1);
 
           Orders addedOrders = os.addOrder(o);
