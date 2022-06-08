@@ -9,5 +9,8 @@
         <module name="Fusion" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Fusion" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
