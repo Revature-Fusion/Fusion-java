@@ -62,4 +62,24 @@ public class ProductRepoTest {
         Product actual = pr.deleteProduct(product.getP_id());
         Assertions.assertEquals(product, actual);
     }
+
+    @Test
+    public void negativeGetProduct() {
+        Product actual = pr.getProduct(Integer.MAX_VALUE);
+        Assertions.assertNull(actual);
+    }
+
+    @Test
+    public void negativeUpdateProduct() {
+        Product change = new Product();
+        change.setP_id(Integer.MAX_VALUE);
+        Product actual = pr.updateProduct(change);
+        Assertions.assertNull(actual);
+    }
+
+    @Test
+    public void negativeDeleteProduct() {
+        Product actual = pr.deleteProduct(Integer.MAX_VALUE);
+        Assertions.assertNull(actual);
+    }
 }
