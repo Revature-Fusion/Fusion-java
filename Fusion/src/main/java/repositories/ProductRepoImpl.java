@@ -1,5 +1,8 @@
 package repositories;
 
+import exceptions.ResourceNotFoundException;
+import jdk.management.resource.ResourceRequest;
+import jdk.management.resource.ResourceRequestDeniedException;
 import models.Product;
 import util.JDBCConnection;
 
@@ -15,7 +18,7 @@ public class ProductRepoImpl implements ProductRepo {
     public static Connection conn = JDBCConnection.getConnection();
 
     @Override
-    public Product getProduct(int id) {
+    public Product getProduct(int id) throws ResourceNotFoundException {
         String sql = "Select * from products where p_id = ?";
         try
         {
@@ -25,6 +28,8 @@ public class ProductRepoImpl implements ProductRepo {
             if (rs1.next())
             {
                 return buildProduct(rs1);
+            } else {
+                throw new ResourceNotFoundException("Product Not Found");
             }
         }
         catch (SQLException e)
@@ -81,7 +86,7 @@ public class ProductRepoImpl implements ProductRepo {
     }
 
     @Override
-    public Product updateProduct(Product change) {
+    public Product updateProduct(Product change) throws ResourceNotFoundException {
         try
         {
             String sql = "UPDATE products SET \"desc\"=?, price=?, stock=?, picture=?, name=? WHERE p_id=? RETURNING *";
@@ -97,6 +102,8 @@ public class ProductRepoImpl implements ProductRepo {
             if(rs.next())
             {
                 return buildProduct(rs);
+            } else {
+                throw new ResourceNotFoundException("Product Not Found");
             }
         }
         catch(SQLException e)
@@ -107,7 +114,7 @@ public class ProductRepoImpl implements ProductRepo {
     }
 
     @Override
-    public Product deleteProduct(int id) {
+    public Product deleteProduct(int id) throws ResourceNotFoundException {
         String sql = "delete from products where p_id = ? returning *";
         try
         {
@@ -117,6 +124,8 @@ public class ProductRepoImpl implements ProductRepo {
             if(rs1.next())
             {
                 return buildProduct(rs1);
+            }else {
+                throw new ResourceNotFoundException("Product Not Found");
             }
         }
         catch (SQLException e)
@@ -140,7 +149,7 @@ public class ProductRepoImpl implements ProductRepo {
     public static void main(String[] args) {
         ProductRepo pr = new ProductRepoImpl();
 //        pr.createProduct(new Product(1, "blah", "desc", 12.00F, 7, null));
-        System.out.println(pr.getProduct(3));
+//        System.out.println(pr.getProduct(3));
         System.out.println(pr.getAllProducts());
 //        System.out.println(pr.updateProduct(new Product(3, "123", "desc", 12.00F, 90, null)));
 //        pr.deleteProduct(1);
