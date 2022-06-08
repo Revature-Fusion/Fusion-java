@@ -43,8 +43,13 @@ public class ProductController {
         Product p = gson.fromJson(context.body(), Product.class);
 
         p = ps.createProduct(p);
-        context.result(gson.toJson(p));
-        context.status(201);
+
+        if(p != null) {
+            context.result(gson.toJson(p));
+            context.status(201);
+        } else {
+            context.status(404);
+        }
 
     };
 
