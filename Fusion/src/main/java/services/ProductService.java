@@ -15,5 +15,7 @@ public interface ProductService {
 
     Product updateProduct(Product change) throws ResourceNotFoundException;
 
+    Product updateProductStock(int id, int amount) throws ResourceNotFoundException;
+
     Product deleteProduct(int id) throws ResourceNotFoundException;
 }

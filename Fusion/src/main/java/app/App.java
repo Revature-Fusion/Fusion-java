@@ -74,6 +74,7 @@ public class App {
         app.get("/products/:id", pc.getProduct);
         app.post("/products/", pc.createProduct);
         app.put("/products/:id", pc.updateProduct);
+        app.patch("/products/:id", pc.updateProductStock);
         app.delete("/products/:id", pc.deleteProduct);
 
         app.post("/address", ac.createAddress);
