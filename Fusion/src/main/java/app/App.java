@@ -78,7 +78,7 @@ public class App {
 
         app.post("/address", ac.createAddress);
         app.get("/address/:a_id", ac.getAddress);
-        app.get("/address/:u_id", ac.getAddressByUser);
+        app.get("/address/user/:u_id", ac.getAddressByUser);
         app.put("/address/:a_id", ac.updateAddress);
         app.delete("/address/:a_id", ac.deleteAddress);
 
