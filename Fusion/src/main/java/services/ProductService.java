@@ -1,19 +1,18 @@
 package services;
 
-import exceptions.ResourceNotFoundException;
 import models.Product;
 
 import java.util.List;
 
 public interface ProductService {
 
-    Product getProduct(int id) throws ResourceNotFoundException;
+    Product getProduct(int id);
 
     List<Product> getAllProducts();
 
     Product createProduct(Product product);
 
-    Product updateProduct(Product change) throws ResourceNotFoundException;
+    Product updateProduct(Product change);
 
-    Product deleteProduct(int id) throws ResourceNotFoundException;
+    Product deleteProduct(int id);
 }
