@@ -34,6 +34,14 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public Product updateProductStock(int id, int amount) {
+        Product change = pr.getProduct(id);
+        change.setStock(change.getStock() - amount);
+
+        return pr.updateProduct(change);
+    }
+
+    @Override
     public Product deleteProduct(int id) {
         return pr.deleteProduct(id);
     }

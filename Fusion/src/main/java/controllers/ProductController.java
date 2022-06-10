@@ -58,6 +58,15 @@ public class ProductController {
 
     };
 
+    public Handler updateProductStock = (context) -> {
+            int id = Integer.parseInt(context.pathParam("id"));
+            int amount = gson.fromJson(context.body(), Product.class).getStock();
+            Product change = ps.updateProductStock(id, amount);
+            context.result(gson.toJson(change));
+            context.status(404);
+
+    };
+
     public Handler deleteProduct = (context) -> {
 
         int id = Integer.parseInt(context.pathParam("id"));
