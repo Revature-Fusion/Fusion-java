@@ -1,0 +1,58 @@
+package steps;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import pages.FusionCheckout;
+import runner.TestNGRunner;
+
+public class FusionCheckoutImpl {
+
+    public static WebDriver driver = TestNGRunner.driver;
+    public static FusionCheckout fusionCheckout = TestNGRunner.fusionCheckout;
+
+    @Given("The User is on the Checkout Page")
+    public void the_user_is_on_the_checkout_page() {
+        driver.get("file:///Users/David/Revature/Projects/P3/Fusion-frontend/checkout.html");
+    }
+    @When("The User types in Full Name")
+    public void the_user_types_in_full_name() {
+        fusionCheckout.enterName();
+    }
+    @When("The User types in Email")
+    public void the_user_types_in_email() {
+        fusionCheckout.enterEmail();
+    }
+    @When("The User types in Address")
+    public void the_user_types_in_address() {
+        fusionCheckout.enterAddress();
+    }
+    @When("The User types in City")
+    public void the_user_types_in_city() {
+        fusionCheckout.enterCity();
+    }
+    @When("The User types in Zip")
+    public void the_user_types_in_zip() {
+        fusionCheckout.enterZip();
+    }
+    @Then("The User can click Checkout")
+    public void the_user_can_click_checkout() {
+        fusionCheckout.clickCheckout();
+    }
+
+    // Remove Product from Cart Functionality
+//    @Given("The User is on the Checkout Page")
+//    public void the_user_is_on_the_checkout_page() {
+//        driver.get("file:///Users/David/Revature/Projects/P3/Fusion-frontend/checkout.html");
+//    }
+    @When("The User clicks on Remove Item")
+    public void the_user_clicks_on_remove_item() {
+        fusionCheckout.clickRemoveItem();
+    }
+    @Then("The Item Quantity should be reflected inside the Cart")
+    public void the_item_quantity_should_be_reflected_inside_the_cart() {
+        Assert.assertEquals(driver.getTitle(), "Cart");
+    }
+}
