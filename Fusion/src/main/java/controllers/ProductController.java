@@ -1,7 +1,6 @@
 package controllers;
 
 import com.google.gson.Gson;
-import exceptions.ResourceNotFoundException;
 import models.Product;
 import services.ProductService;
 
@@ -26,15 +25,10 @@ public class ProductController {
     };
 
     public Handler getProduct = (context) -> {
-        try {
-            int id = Integer.parseInt(context.pathParam("id"));
-            Product p = ps.getProduct(id);
-            context.result(gson.toJson(p));
-        } catch (ResourceNotFoundException e) {
-            context.status(404);
-            context.result(e.getMessage());
-        }
 
+        int id = Integer.parseInt(context.pathParam("id"));
+        Product p = ps.getProduct(id);
+        context.result(gson.toJson(p));
 
     };
 
@@ -55,30 +49,20 @@ public class ProductController {
 
     public Handler updateProduct = (context) -> {
 
-        try {
-            int id = Integer.parseInt(context.pathParam("id"));
-            Product change = gson.fromJson(context.body(), Product.class);
-            change.setP_id(id);
+        int id = Integer.parseInt(context.pathParam("id"));
+        Product change = gson.fromJson(context.body(), Product.class);
+        change.setP_id(id);
 
-            change = ps.updateProduct(change);
-            context.result(gson.toJson(change));
-        } catch (ResourceNotFoundException e) {
-            context.status(404);
-            context.result(e.getMessage());
-        }
+        change = ps.updateProduct(change);
+        context.result(gson.toJson(change));
 
     };
 
     public Handler deleteProduct = (context) -> {
-        try {
-            int id = Integer.parseInt(context.pathParam("id"));
-            Product p = ps.deleteProduct(id);
-            context.status(204);
-        } catch (ResourceNotFoundException e) {
-            context.status(404);
-            context.result(e.getMessage());
-        }
 
+        int id = Integer.parseInt(context.pathParam("id"));
+        Product p = ps.deleteProduct(id);
+        context.status(204);
 
     };
 

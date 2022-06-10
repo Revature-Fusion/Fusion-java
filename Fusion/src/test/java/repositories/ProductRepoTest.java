@@ -1,6 +1,5 @@
 package repositories;
 
-import exceptions.ResourceNotFoundException;
 import models.Product;
 import org.junit.After;
 import org.junit.Before;
@@ -24,7 +23,7 @@ public class ProductRepoTest {
     }
 
     @After
-    public void tearDown() throws ResourceNotFoundException {
+    public void tearDown() {
         if (product != null) {
             pr.deleteProduct(product.getP_id());
             product = null;
@@ -44,14 +43,14 @@ public class ProductRepoTest {
     }
 
     @Test
-    public void getProduct() throws Exception {
+    public void getProduct() {
         Product actual = pr.getProduct(product.getP_id());
         Product expected = new Product(product.getP_id(), "name", "desc", 12f, 15, null);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void updateProduct() throws Exception {
+    public void updateProduct() {
         String newName = "new";
         product.setName(newName);
         Product actual = pr.updateProduct(product);
@@ -59,27 +58,8 @@ public class ProductRepoTest {
     }
 
     @Test
-    public void deleteProduct() throws Exception {
+    public void deleteProduct() {
         Product actual = pr.deleteProduct(product.getP_id());
         Assertions.assertEquals(product, actual);
-    }
-
-    @Test
-    public void negativeGetProduct() {
-        Assertions.assertThrows(ResourceNotFoundException.class, () -> pr.getProduct(Integer.MAX_VALUE));
-    }
-
-    @Test
-    public void negativeUpdateProduct() {
-        Assertions.assertThrows(ResourceNotFoundException.class, () -> {
-            Product change = new Product();
-            change.setP_id(Integer.MAX_VALUE);
-            pr.updateProduct(change);
-        });
-    }
-
-    @Test
-    public void negativeDeleteProduct() {
-        Assertions.assertThrows(ResourceNotFoundException.class, () -> pr.deleteProduct(Integer.MAX_VALUE));
     }
 }
