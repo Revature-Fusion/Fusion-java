@@ -69,18 +69,6 @@ public class ProductController {
 
     };
 
-    public Handler updateProductStock = (context) -> {
-        try {
-            int id = Integer.parseInt(context.pathParam("id"));
-            int amount = gson.fromJson(context.body(), Product.class).getStock();
-            Product change = ps.updateProductStock(id, amount);
-            context.result(gson.toJson(change));
-        } catch (ResourceNotFoundException e) {
-            context.status(404);
-            context.result(e.getMessage());
-        }
-    };
-
     public Handler deleteProduct = (context) -> {
         try {
             int id = Integer.parseInt(context.pathParam("id"));
