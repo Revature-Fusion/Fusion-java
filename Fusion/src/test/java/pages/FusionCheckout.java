@@ -11,8 +11,11 @@ public class FusionCheckout {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(id = "fname")
-    private WebElement fname;
+    @FindBy(id = "fName")
+    private WebElement fName;
+
+    @FindBy(id = "lName")
+    private WebElement lName;
 
     @FindBy(id = "email")
     private WebElement email;
@@ -23,19 +26,26 @@ public class FusionCheckout {
     @FindBy(id = "city")
     private WebElement city;
 
-    @FindBy(id = "zip")
-    private WebElement zip;
+    @FindBy(id = "pCode")
+    private WebElement pCode;
 
-    @FindBy(xpath = "/html/body/div[1]/div/input[1]")
+    @FindBy(id = "ctr")
+    private WebElement ctr;
+
+    @FindBy(xpath = "/html/body/div[2]/div[1]/div/form/input[1]")
     private WebElement checkoutBtn;
 
     // Cart element to remove item goes here.
-    @FindBy(xpath = "/html/body/div[2]/div/p[5]/span")
+    @FindBy(xpath = "/html/body/div[2]/div[2]/div/p")
     private WebElement removeBtn;
 
-    public void enterName() {
-        fname.click();
-        fname.sendKeys("Java Selenium");
+    public void enterfName() {
+        fName.click();
+        fName.sendKeys("Java");
+    }
+    public void enterlName() {
+        lName.click();
+        lName.sendKeys("Selenium");
     }
     public void enterEmail() {
         email.click();
@@ -49,9 +59,13 @@ public class FusionCheckout {
         city.click();
         city.sendKeys("Cucumber City");
     }
-    public void enterZip() {
-        zip.click();
-        zip.sendKeys("10010");
+    public void enterpCode() {
+        pCode.click();
+        pCode.sendKeys("10010");
+    }
+    public void enterCountry() {
+        ctr.click();
+        ctr.sendKeys("Canada");
     }
     public void clickCheckout() {
         checkoutBtn.click();

@@ -17,9 +17,13 @@ public class FusionCheckoutImpl {
     public void the_user_is_on_the_checkout_page() {
         driver.get("file:///Users/David/Revature/Projects/P3/Fusion-frontend/checkout.html");
     }
-    @When("The User types in Full Name")
-    public void the_user_types_in_full_name() {
-        fusionCheckout.enterName();
+    @When("The User types in First Name")
+    public void the_user_types_in_first_name() {
+        fusionCheckout.enterfName();
+    }
+    @When("The User types in Last Name")
+    public void the_user_types_in_last_name() {
+        fusionCheckout.enterlName();
     }
     @When("The User types in Email")
     public void the_user_types_in_email() {
@@ -33,10 +37,12 @@ public class FusionCheckoutImpl {
     public void the_user_types_in_city() {
         fusionCheckout.enterCity();
     }
-    @When("The User types in Zip")
+    @When("The User types in Postal Code")
     public void the_user_types_in_zip() {
-        fusionCheckout.enterZip();
+        fusionCheckout.enterpCode();
     }
+    @When("The User types in Country")
+    public void the_user_types_in_country() { fusionCheckout.enterCountry(); }
     @Then("The User can click Checkout")
     public void the_user_can_click_checkout() {
         fusionCheckout.clickCheckout();
@@ -53,6 +59,6 @@ public class FusionCheckoutImpl {
     }
     @Then("The Item Quantity should be reflected inside the Cart")
     public void the_item_quantity_should_be_reflected_inside_the_cart() {
-        Assert.assertEquals(driver.getTitle(), "Cart");
+        Assert.assertEquals(driver.getTitle(), "Fusion - Checkout - Cart");
     }
 }
