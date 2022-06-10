@@ -92,7 +92,7 @@ public class OrdersRepoImpl implements OrdersRepo{
             PreparedStatement ps = conn.prepareStatement(sql);
 
             ps.setInt(1, o.getuID());
-            ps.setLong(2, o.getDateOfPurchase());
+            ps.setLong(2, o.getDateOfPurchasing());
             ps.setInt(3, o.getaID());
 
             ResultSet rs = ps.executeQuery();
@@ -115,7 +115,7 @@ public class OrdersRepoImpl implements OrdersRepo{
             PreparedStatement ps = conn.prepareStatement(sql);
 
             ps.setInt(1, change.getuID());
-            ps.setLong(2, change.getDateOfPurchase());
+            ps.setLong(2, change.getDateOfPurchasing());
             ps.setInt(3, change.getaID());
             ps.setInt(4, change.getoID());
             ResultSet rs = ps.executeQuery();
@@ -175,7 +175,7 @@ public class OrdersRepoImpl implements OrdersRepo{
         Orders o = new Orders(1, 1, 1654613952000l, 1);
         o.setoID(rs.getInt("o_id"));
         o.setuID(rs.getInt("u_id"));
-        o.setDateOfPurchase(rs.getLong("date_of_purchase"));
+        o.setDateOfPurchasing(rs.getLong("date_of_purchase"));
         o.setaID(rs.getInt("a_id"));
 
         return o;
