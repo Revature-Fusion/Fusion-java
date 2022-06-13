@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f0f5b9e4-1907-4501-8f95-43dab50e05d9" name="Changes" comment="merging address">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginAndPreviousOrdersMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runner/TestNGRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/TestNGRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/ViewPreviousOrdersStepsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/ViewPreviousOrdersStepsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/view-orders.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/view-orders.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

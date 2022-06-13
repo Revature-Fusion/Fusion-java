@@ -6,20 +6,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-import pages.LoginMain;
+import pages.LoginAndPreviousOrdersMain;
 
 @CucumberOptions(features = {"src/test/resources/view-orders.feature"}, glue={"steps"})
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 
     public static WebDriver driver;
-    public static LoginMain loginMain;
+    public static LoginAndPreviousOrdersMain loginMain;
 
     @BeforeSuite
     public void setup(){
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
 
         driver = new ChromeDriver();
-        loginMain = new LoginMain(driver);
+        loginMain = new LoginAndPreviousOrdersMain(driver);
     }
 
     @AfterSuite

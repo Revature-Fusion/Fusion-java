@@ -4,11 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class LoginMain {
+public class LoginAndPreviousOrdersMain {
 
     WebDriver driver;
 
-    public LoginMain(WebDriver driver) {
+    public LoginAndPreviousOrdersMain(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -22,6 +22,10 @@ public class LoginMain {
 
     public WebElement loginButton(){
         return driver.findElement(By.id("login"));
+    }
+
+    public WebElement refreshButton(){
+        return driver.findElement(By.id("refresh"));
     }
 
 }
