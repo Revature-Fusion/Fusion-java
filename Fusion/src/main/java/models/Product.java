@@ -10,11 +10,11 @@ public class Product {
     private String desc;
     private float price;
     private int stock;
-    private byte[] picture;
+    private String picture;
 
     public Product() {}
 
-    public Product(int p_id, String name, String desc, float price, int stock, byte[] picture) {
+    public Product(int p_id, String name, String desc, float price, int stock, String picture) {
         this.p_id = p_id;
         this.name = name;
         this.desc = desc;
@@ -63,11 +63,11 @@ public class Product {
         this.stock = stock;
     }
 
-    public byte[] getPicture() {
+    public String getPicture() {
         return picture;
     }
 
-    public void setPicture(byte[] picture) {
+    public void setPicture(String picture) {
         this.picture = picture;
     }
 
@@ -76,13 +76,11 @@ public class Product {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
-        return p_id == product.p_id && Float.compare(product.price, price) == 0 && stock == product.stock && Objects.equals(name, product.name) && Objects.equals(desc, product.desc) && Arrays.equals(picture, product.picture);
+        return p_id == product.p_id && Float.compare(product.price, price) == 0 && stock == product.stock && Objects.equals(name, product.name) && Objects.equals(desc, product.desc) && Objects.equals(picture, product.picture);
     }
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(p_id, name, desc, price, stock);
-        result = 31 * result + Arrays.hashCode(picture);
-        return result;
+        return Objects.hash(p_id, name, desc, price, stock, picture);
     }
 }
