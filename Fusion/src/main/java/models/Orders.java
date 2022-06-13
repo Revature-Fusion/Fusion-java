@@ -6,15 +6,15 @@ public class Orders {
 
     private int oID;    // Order ID
     private int uID;    // User ID
-    private long dateOfPurchasing;   // Date Of Purchasing as UNIX Timestamp
+    private long dateOfPurchase;   // Date Of Purchasing as UNIX Timestamp
     private int aID;    // Address ID
 
     public Orders(){ }
 
-    public Orders(int oID, int uID, long dateOfPurchasing, int aID) {
+    public Orders(int oID, int uID, long dateOfPurchase, int aID) {
         this.oID = oID;
         this.uID = uID;
-        this.dateOfPurchasing = dateOfPurchasing;
+        this.dateOfPurchase = dateOfPurchase;
         this.aID = aID;
     }
 
@@ -34,13 +34,11 @@ public class Orders {
         this.uID = uID;
     }
 
-    public long getDateOfPurchasing() {
-        return dateOfPurchasing;
+    public long getDateOfPurchase() {
+        return dateOfPurchase;
     }
 
-    public void setDateOfPurchasing(long dateOfPurchasing) {
-        this.dateOfPurchasing = dateOfPurchasing;
-    }
+    public void setDateOfPurchase(long dateOfPurchase) {this.dateOfPurchase = dateOfPurchase;}
 
     public int getaID() {
         return aID;
@@ -55,12 +53,12 @@ public class Orders {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Orders orders = (Orders) o;
-        return oID == orders.oID && uID == orders.uID && dateOfPurchasing == orders.dateOfPurchasing && aID == orders.aID;
+        return oID == orders.oID && uID == orders.uID && dateOfPurchase == orders.dateOfPurchase && aID == orders.aID;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(oID, uID, dateOfPurchasing, aID);
+        return Objects.hash(oID, uID, dateOfPurchase, aID);
     }
 
     @Override
@@ -68,7 +66,7 @@ public class Orders {
         return "Orders{" +
                 "oID=" + oID +
                 ", uID=" + uID +
-                ", dateOfPurchasing=" + dateOfPurchasing +
+                ", dateOfPurchase=" + dateOfPurchase +
                 ", aID=" + aID +
                 '}';
     }
