@@ -6,16 +6,25 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pages.FusionCheckout;
+import pages.SessionStorage;
 import runner.TestNGRunner;
+
 
 public class FusionCheckoutImpl {
 
     public static WebDriver driver = TestNGRunner.driver;
     public static FusionCheckout fusionCheckout = TestNGRunner.fusionCheckout;
 
+    public SessionStorage sessionStorage = new SessionStorage(driver);
+
     @Given("The User is on the Checkout Page")
     public void the_user_is_on_the_checkout_page() {
         driver.get("file:///Users/David/Revature/Projects/P3/Fusion-frontend/checkout.html");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
     @When("The User types in First Name")
     public void the_user_types_in_first_name() {
@@ -48,17 +57,24 @@ public class FusionCheckoutImpl {
         fusionCheckout.clickCheckout();
     }
 
-    // Remove Product from Cart Functionality
-//    @Given("The User is on the Checkout Page")
-//    public void the_user_is_on_the_checkout_page() {
-//        driver.get("file:///Users/David/Revature/Projects/P3/Fusion-frontend/checkout.html");
-//    }
-    @When("The User clicks on Remove Item")
-    public void the_user_clicks_on_remove_item() {
-        fusionCheckout.clickRemoveItem();
+    @Given("^The User is logged in$")
+    public void the_User_is_logged_in() {
+        sessionStorage.setItemInSessionStorage("user", "JSON.stringify({uId: 10, email: \"test9@email.com\", firstName: \"test9fname\", lastName: \"test9lname\"})");
+        driver.navigate().refresh();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
-    @Then("The Item Quantity should be reflected inside the Cart")
-    public void the_item_quantity_should_be_reflected_inside_the_cart() {
-        Assert.assertEquals(driver.getTitle(), "Fusion - Checkout - Cart");
+
+    @When("^The User clicks checkout$")
+    public void the_User_clicks_checkout() {
+       fusionCheckout.clickCheckout();
+    }
+
+    @Then("^The User successfully checks out$")
+    public void the_User_successfully_checks_out() throws Throwable {
+        Assert.assertEquals(driver.switchTo().alert().getText(), "Successfully Checked out!");
     }
 }
