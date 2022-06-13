@@ -16,7 +16,7 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 
     @BeforeSuite
     public void setup(){
-        System.setProperty("webdriver.chrome.driver", "Webdriver path");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
 
         driver = new ChromeDriver();
         loginMain = new LoginMain(driver);
