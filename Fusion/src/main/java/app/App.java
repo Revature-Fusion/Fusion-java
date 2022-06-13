@@ -74,11 +74,12 @@ public class App {
         app.get("/products/:id", pc.getProduct);
         app.post("/products/", pc.createProduct);
         app.put("/products/:id", pc.updateProduct);
+        app.patch("/products/:id", pc.updateProductStock);
         app.delete("/products/:id", pc.deleteProduct);
 
         app.post("/address", ac.createAddress);
         app.get("/address/:a_id", ac.getAddress);
-        app.get("/address/:u_id", ac.getAddressByUser);
+        app.get("/address/user/:u_id", ac.getAddressByUser);
         app.put("/address/:a_id", ac.updateAddress);
         app.delete("/address/:a_id", ac.deleteAddress);
 
