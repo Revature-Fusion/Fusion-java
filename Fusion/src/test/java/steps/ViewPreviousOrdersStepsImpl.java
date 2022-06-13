@@ -15,11 +15,9 @@ public class ViewPreviousOrdersStepsImpl {
     public static WebDriver driver = null;
     public static LoginAndPreviousOrdersMain loginMain = TestNGRunner.loginMain;
 
-    public static String loginPageLink = "file:///C:/Users/visio/OneDrive/Documents/GitHub/Fusion-frontend/login.html";
-
     @Given("User is logged in and on view orders page")
     public void user_is_logged_in_and_on_view_orders_page() {
-        driver.get(loginPageLink);
+        driver.get("file:///C:\\Users\\visio\\OneDrive\\Documents\\Temp\\Fusion-frontend");
         WebElement username = loginMain.usernameField();
         WebElement password = loginMain.passwordField();
         WebElement loginButton = loginMain.loginButton();
