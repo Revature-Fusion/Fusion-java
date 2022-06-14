@@ -12,7 +12,7 @@ import runner.TestNGRunner;
 
 public class ViewPreviousOrdersStepsImpl {
 
-    public static WebDriver driver = null;
+    public static WebDriver driver = TestNGRunner.driver;
     public static LoginAndPreviousOrdersMain loginMain = TestNGRunner.loginMain;
 
     @Given("User is logged in and on view orders page")

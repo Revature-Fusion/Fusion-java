@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import pages.LoginAndPreviousOrdersMain;
+import steps.ViewPreviousOrdersStepsImpl;
 
 @CucumberOptions(features = {"src/test/resources/view-orders.feature"}, glue={"steps"})
 public class TestNGRunner extends AbstractTestNGCucumberTests {
@@ -14,9 +15,11 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
     public static WebDriver driver;
     public static LoginAndPreviousOrdersMain loginMain;
 
+//    public static ViewPreviousOrdersStepsImpl viewPreviousOrdersSteps;
+
     @BeforeSuite
     public void setup(){
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\visio\\Downloads\\chromedriver_win32 (4)/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\visio\\Downloads\\chromedriver_win32\\chromedriver.exe");
 
         driver = new ChromeDriver();
         loginMain = new LoginAndPreviousOrdersMain(driver);
