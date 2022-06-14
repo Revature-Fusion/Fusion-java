@@ -5,9 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0f5b9e4-1907-4501-8f95-43dab50e05d9" name="Changes" comment="merging address">
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_apache_extras_beanshell_bsh_2_0b6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_testng_testng_6_14_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_48.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__com_beust_jcommander_1_72.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_beanshell_bsh_2_0b4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_9_10.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-     <change beforePath="$PROJECT_DIR$/src/main/java/models/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Orders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/OrdersRepoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/OrdersRepoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginAndPreviousOrdersMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginAndPreviousOrdersMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/TestNGRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/TestNGRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/FusionCheckoutImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/FusionCheckoutImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/ViewPreviousOrdersStepsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/ViewPreviousOrdersStepsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/view-orders.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/view-orders.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/runner/TestNGRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runner/TestNGRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/steps/FusionCheckoutImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/steps/FusionCheckoutImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/steps/ViewPreviousOrdersStepsImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/steps/ViewPreviousOrdersStepsImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,29 +55,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/patri/Documents/Coding/RevTraining/Python/FusionApp/Fusion-java/Fusion&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;build.tools&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/David/Revature/Projects/P3/Java/Fusion",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.AddressRepoTest">
-    <configuration name="AddressRepoImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="repositories.AddressRepoImpl" />
-      <module name="Fusion" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="repositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\visio\OneDrive\Documents\GitHub\Fusion-java\Fusion\src\test\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\visio\OneDrive\Documents\GitHub\Fusion-java\Fusion\src\test\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.TestNGRunner">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.App" />
       <module name="Fusion" />
@@ -78,12 +88,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductRepoImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="repositories.ProductRepoImpl" />
+    <configuration name="Feature: view-orders-refresh" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/view-orders-refresh.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Fusion" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: view-orders-refresh" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="repositories.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,43 +106,108 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddressRepoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: view-orders" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/view-orders.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Fusion" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: view-orders" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="repositories.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="repositories" />
-      <option name="MAIN_CLASS_NAME" value="repositories.AddressRepoTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddressRepoTest.getAddressByUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: User successfully gets previous orders (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/view-orders.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Fusion" />
+      <option name="NAME_FILTER" value="^User successfully gets previous orders$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^User successfully gets previous orders$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: User successfully gets previous orders" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="repositories.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="repositories" />
-      <option name="MAIN_CLASS_NAME" value="repositories.AddressRepoTest" />
-      <option name="METHOD_NAME" value="getAddressByUser" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scenario: User successfully gets previous orders" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/view-orders-refresh.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Fusion" />
+      <option name="NAME_FILTER" value="^User successfully gets previous orders$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^User successfully gets previous orders$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: User successfully gets previous orders" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestNGRunner" type="TestNG" nameIsGenerated="true">
+      <module name="Fusion" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.TestNGRunner" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Cucumber Java.Scenario: User successfully gets previous orders (1)" />
+      <item itemvalue="Cucumber Java.Feature: view-orders" />
+      <item itemvalue="Cucumber Java.Feature: view-orders-refresh" />
+      <item itemvalue="Cucumber Java.Scenario: User successfully gets previous orders" />
+      <item itemvalue="TestNG.TestNGRunner" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AddressRepoTest" />
-        <item itemvalue="JUnit.AddressRepoTest.getAddressByUser" />
+        <item itemvalue="Cucumber Java.Feature: view-orders" />
         <item itemvalue="Application.App" />
-        <item itemvalue="Application.AddressRepoImpl" />
+        <item itemvalue="Cucumber Java.Scenario: User successfully gets previous orders (1)" />
+        <item itemvalue="Cucumber Java.Feature: view-orders-refresh" />
+        <item itemvalue="Cucumber Java.Scenario: User successfully gets previous orders" />
       </list>
     </recent_temporary>
   </component>
