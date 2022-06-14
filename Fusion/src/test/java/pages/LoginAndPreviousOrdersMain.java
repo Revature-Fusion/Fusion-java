@@ -24,6 +24,8 @@ public class LoginAndPreviousOrdersMain {
         return driver.findElement(By.id("login"));
     }
 
+    public WebElement viewOrdersButton() { return driver.findElement(By.xpath("//*[@id=\"nav\"]/li[2]/a"));}
+
     public WebElement refreshButton(){
         return driver.findElement(By.id("refresh"));
     }

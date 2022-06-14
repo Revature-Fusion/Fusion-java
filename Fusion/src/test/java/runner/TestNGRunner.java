@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import pages.FusionCheckout;
+import pages.LoginAndPreviousOrdersMain;
+import steps.ViewPreviousOrdersStepsImpl;
 
 import java.util.concurrent.TimeUnit;
 
@@ -18,6 +20,7 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
     public static WebDriver driver;
 
     public static FusionCheckout fusionCheckout;
+    public static LoginAndPreviousOrdersMain loginMain;
 
     @BeforeSuite
     public void setUp() {
@@ -25,6 +28,7 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 
         driver = new ChromeDriver();
         fusionCheckout = new FusionCheckout(driver);
+        loginMain = new LoginAndPreviousOrdersMain(driver);
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }

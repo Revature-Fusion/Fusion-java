@@ -4,10 +4,13 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import pages.FusionCheckout;
+import pages.LoginAndPreviousOrdersMain;
 import pages.SessionStorage;
 import runner.TestNGRunner;
 
@@ -16,6 +19,7 @@ public class FusionCheckoutImpl {
 
     public static WebDriver driver = TestNGRunner.driver;
     public static FusionCheckout fusionCheckout = TestNGRunner.fusionCheckout;
+    public static LoginAndPreviousOrdersMain loginMain = TestNGRunner.loginMain;
 
     public SessionStorage sessionStorage = new SessionStorage(driver);
 
@@ -52,7 +56,7 @@ public class FusionCheckoutImpl {
 
     @And("^The User is logged in$")
     public void the_User_is_logged_in() {
-        sessionStorage.setItemInSessionStorage("user", "{\"uId\":10,\"email\":\"test9@email.com\",\"firstName\":\"test9fname\",\"lastName\":\"test9lname\"}");
+        sessionStorage.setItemInSessionStorage("userdata", "{\"uId\":10,\"email\":\"test9@email.com\",\"firstName\":\"test9fname\",\"lastName\":\"test9lname\"}");
         driver.navigate().refresh();
 //        ((JavascriptExecutor)driver).executeScript("checkoutCart();");
         try {
@@ -66,6 +70,11 @@ public class FusionCheckoutImpl {
     public void there_are_items_in_the_cart() {
         sessionStorage.setItemInSessionStorage("cart", "[{\"productId\":44,\"name\":\"HDMI Cable Dual Package\",\"desc\":\"A package of two HDMI cables\",\"price\":12,\"stock\":100,\"quantity\":2},{\"productId\":45,\"name\":\"Cat Ear Headphones\",\"desc\":\"Headphones with cat ears\",\"price\":60,\"stock\":100,\"quantity\":3}]");
         driver.navigate().refresh();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @When("^The User clicks checkout$")
@@ -88,4 +97,5 @@ public class FusionCheckoutImpl {
             e.printStackTrace();
         }
     }
+
 }

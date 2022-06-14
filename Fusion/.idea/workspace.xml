@@ -5,11 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0f5b9e4-1907-4501-8f95-43dab50e05d9" name="Changes" comment="merging address">
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_apache_extras_beanshell_bsh_2_0b6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_testng_testng_6_14_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_48.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__com_beust_jcommander_1_72.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_beanshell_bsh_2_0b4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_9_10.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginAndPreviousOrdersMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginAndPreviousOrdersMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runner/TestNGRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/TestNGRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/FusionCheckoutImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/FusionCheckoutImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/ViewPreviousOrdersStepsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/ViewPreviousOrdersStepsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/connection.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/view-orders.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/view-orders.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/runner/TestNGRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runner/TestNGRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/steps/FusionCheckoutImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/steps/FusionCheckoutImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/steps/ViewPreviousOrdersStepsImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/steps/ViewPreviousOrdersStepsImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,17 +55,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/visio/OneDrive/Documents/GitHub/Fusion-java/Fusion&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/David/Revature/Projects/P3/Java/Fusion",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\visio\OneDrive\Documents\GitHub\Fusion-java\Fusion\src\test\resources" />
@@ -193,9 +203,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: view-orders" />
         <item itemvalue="Application.App" />
         <item itemvalue="Cucumber Java.Scenario: User successfully gets previous orders (1)" />
-        <item itemvalue="Cucumber Java.Feature: view-orders" />
         <item itemvalue="Cucumber Java.Feature: view-orders-refresh" />
         <item itemvalue="Cucumber Java.Scenario: User successfully gets previous orders" />
       </list>
