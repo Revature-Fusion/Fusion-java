@@ -1,10 +1,13 @@
 package repositories;
 
+import exceptions.ResourceNotFoundException;
 import models.Product;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+
+import java.sql.SQLException;
 
 public class ProductRepoTest {
 
@@ -24,14 +27,20 @@ public class ProductRepoTest {
 
     @After
     public void tearDown() {
-        if (product != null) {
-            pr.deleteProduct(product.getP_id());
-            product = null;
+        try {
+            if (product != null) {
+                pr.deleteProduct(product.getP_id());
+                product = null;
+            }
+            if (createdProduct != null) {
+                pr.deleteProduct(createdProduct.getP_id());
+                createdProduct = null;
+            }
+        } catch(ResourceNotFoundException e)
+        {
+            e.printStackTrace();
         }
-        if (createdProduct != null) {
-            pr.deleteProduct(createdProduct.getP_id());
-            createdProduct = null;
-        }
+
     }
 
     @Test
@@ -44,22 +53,41 @@ public class ProductRepoTest {
 
     @Test
     public void getProduct() {
-        Product actual = pr.getProduct(product.getP_id());
-        Product expected = new Product(product.getP_id(), "name", "desc", 12f, 15, null);
-        Assertions.assertEquals(expected, actual);
+        try {
+            Product actual = pr.getProduct(product.getP_id());
+            Product expected = new Product(product.getP_id(), "name", "desc", 12f, 15, null);
+            Assertions.assertEquals(expected, actual);
+        } catch(ResourceNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+
+
     }
 
     @Test
     public void updateProduct() {
-        String newName = "new";
-        product.setName(newName);
-        Product actual = pr.updateProduct(product);
-        Assertions.assertEquals(actual.getName(), newName);
+        try {
+            String newName = "new";
+            product.setName(newName);
+            Product actual = pr.updateProduct(product);
+            Assertions.assertEquals(actual.getName(), newName);
+        } catch(ResourceNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+
     }
 
     @Test
     public void deleteProduct() {
-        Product actual = pr.deleteProduct(product.getP_id());
-        Assertions.assertEquals(product, actual);
+        try {
+            Product actual = pr.deleteProduct(product.getP_id());
+            Assertions.assertEquals(product, actual);
+        } catch(ResourceNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+
     }
 }
