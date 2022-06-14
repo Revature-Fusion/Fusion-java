@@ -1,8 +1,10 @@
 package steps;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pages.FusionCheckout;
@@ -26,41 +28,11 @@ public class FusionCheckoutImpl {
             e.printStackTrace();
         }
     }
-    @When("The User types in First Name")
-    public void the_user_types_in_first_name() {
-        fusionCheckout.enterfName();
-    }
-    @When("The User types in Last Name")
-    public void the_user_types_in_last_name() {
-        fusionCheckout.enterlName();
-    }
+
     @When("The User types in Email")
     public void the_user_types_in_email() {
+//        sessionStorage.setItemInSessionStorage("user", "test32@email.com");
         fusionCheckout.enterEmail();
-    }
-    @When("The User types in Address")
-    public void the_user_types_in_address() {
-        fusionCheckout.enterAddress();
-    }
-    @When("The User types in City")
-    public void the_user_types_in_city() {
-        fusionCheckout.enterCity();
-    }
-    @When("The User types in Postal Code")
-    public void the_user_types_in_zip() {
-        fusionCheckout.enterpCode();
-    }
-    @When("The User types in Country")
-    public void the_user_types_in_country() { fusionCheckout.enterCountry(); }
-    @Then("The User can click Checkout")
-    public void the_user_can_click_checkout() {
-        fusionCheckout.clickCheckout();
-    }
-
-    @Given("^The User is logged in$")
-    public void the_User_is_logged_in() {
-        sessionStorage.setItemInSessionStorage("user", "JSON.stringify({uId: 10, email: \"test9@email.com\", firstName: \"test9fname\", lastName: \"test9lname\"})");
-        driver.navigate().refresh();
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -68,13 +40,52 @@ public class FusionCheckoutImpl {
         }
     }
 
+    @Then("The User can click Checkout")
+    public void the_user_can_click_checkout() {
+        fusionCheckout.clickCheckout();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @And("^The User is logged in$")
+    public void the_User_is_logged_in() {
+        sessionStorage.setItemInSessionStorage("user", "{\"uId\":10,\"email\":\"test9@email.com\",\"firstName\":\"test9fname\",\"lastName\":\"test9lname\"}");
+        driver.navigate().refresh();
+//        ((JavascriptExecutor)driver).executeScript("checkoutCart();");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @And ("^There are items in the cart$")
+    public void there_are_items_in_the_cart() {
+        sessionStorage.setItemInSessionStorage("cart", "[{\"productId\":44,\"name\":\"HDMI Cable Dual Package\",\"desc\":\"A package of two HDMI cables\",\"price\":12,\"stock\":100,\"quantity\":2},{\"productId\":45,\"name\":\"Cat Ear Headphones\",\"desc\":\"Headphones with cat ears\",\"price\":60,\"stock\":100,\"quantity\":3}]");
+        driver.navigate().refresh();
+    }
+
     @When("^The User clicks checkout$")
     public void the_User_clicks_checkout() {
        fusionCheckout.clickCheckout();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Then("^The User successfully checks out$")
-    public void the_User_successfully_checks_out() throws Throwable {
+    public void the_User_successfully_checks_out() {
         Assert.assertEquals(driver.switchTo().alert().getText(), "Successfully Checked out!");
+        driver.switchTo().alert().accept();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

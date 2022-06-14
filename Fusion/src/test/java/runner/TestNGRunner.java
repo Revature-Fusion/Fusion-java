@@ -9,7 +9,10 @@ import pages.FusionCheckout;
 
 import java.util.concurrent.TimeUnit;
 
-@CucumberOptions(features = {"src/test/resources"}, glue = {"steps"})
+@CucumberOptions(features = {"src/test/resources"}, glue = {"steps"}, plugin = { "pretty", "json:target/cucumber-reports/Cucumber.json",
+        "junit:target/cucumber-reports/Cucumber.xml",
+        "html:target/cucumber-reports" },
+        monochrome = true)
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 
     public static WebDriver driver;
@@ -23,7 +26,7 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
         driver = new ChromeDriver();
         fusionCheckout = new FusionCheckout(driver);
 
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @AfterSuite

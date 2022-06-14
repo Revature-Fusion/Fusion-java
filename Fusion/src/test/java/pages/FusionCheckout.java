@@ -35,30 +35,17 @@ public class FusionCheckout {
     @FindBy(xpath = "/html/body/div[2]/div[1]/div/form/input[1]")
     private WebElement checkoutBtn;
 
-    // Cart element to remove item goes here.
-    @FindBy(xpath = "/html/body/div[2]/div[2]/div/p")
-    private WebElement removeBtn;
 
-    public void enterfName() {
-        fName.click();
-        fName.sendKeys("Java");
-    }
-    public void enterlName() {
-        lName.click();
-        lName.sendKeys("Selenium");
-    }
     public void enterEmail() {
         email.click();
-        email.sendKeys("java@selenium.com");
+        email.sendKeys("test32@email.com");
+        adr.click();
     }
     public void enterAddress() {
         adr.click();
         adr.sendKeys("100 Java Way");
     }
-    public void enterCity() {
-        city.click();
-        city.sendKeys("Cucumber City");
-    }
+
     public void enterpCode() {
         pCode.click();
         pCode.sendKeys("10010");
@@ -71,7 +58,4 @@ public class FusionCheckout {
         checkoutBtn.click();
     }
 
-    public void clickRemoveItem() {
-        removeBtn.click();
-    }
 }
